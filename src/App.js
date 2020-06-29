@@ -1,14 +1,22 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import TodoInput from './TodoInput';
+import TodoList from './TodoList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+class App extends Component {
+  render() {
+    const tasks = [
+      { title: 'Todo１つ目', id: 0 },
+      { title: 'Todo２つ目', id: 1 },
+    ];
 
-      </header>
-    </div>
-  );
+    return (
+      <div>
+        <h1>Todo App</h1>
+        <TodoInput />
+        <TodoList tasks={tasks} />
+      </div>
+    );
+  }
 }
 
 export default App;
