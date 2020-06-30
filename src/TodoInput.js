@@ -22,7 +22,7 @@ class TodoInput extends Component{
     return (
       <div>
         <input placeholder='新規TODOを入力してください' value={this.state.inputValue} onChange={this.handleChange} />
-        <a href="/regster" onClick={this.handleClick}>登録</a>
+        <button onClick={this.handleClick}>登録</button>
       </div>
     )
   };
