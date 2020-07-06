@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createStore } from 'redux';
 
+// 初期データ
 const initialState = {
   task: '',
   tasks: [],
@@ -14,12 +15,12 @@ function tasksReducer(state = initialState, action) {
     case 'INPUT_TASK':
       return {
         ...state,
-        task: action.payload.task,
+        task: action.payload.task
       };
     case 'ADD_TASK':
       return {
         ...state,
-        tasks: state.tasks.concat([action.payload.type]),
+        tasks: state.tasks.concat([action.payload.task])
       };
     default:
       return state;
